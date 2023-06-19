@@ -2,7 +2,7 @@ const express = require('express')
 const app = express();
 const cors = require("cors");
 const bodyParser = require('body-parser');
-const port_number = server.listen(process.env.PORT || 3000);
+
 
 app.use(express.json());
 app.use(express.static("public"));
@@ -33,7 +33,7 @@ app.post('/submit', urlencodedParser, function (req, res) {
 
 
 
- app.listen(port_number, function () {
+ app.listen(process.env.PORT || 3000, function () {
   console.log("app listening ")
    
    
